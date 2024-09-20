@@ -53,3 +53,9 @@ fivenum(ECO.new,na.rm=TRUE)
 stem(ECO.new) # stem and leaf plot 
 hist(ECO.new) # histogram
 lines(density(ECO.new,na.rm=TRUE,bw='SJ'))
+plot(ecdf(ECO.new), do.points=FALSE, verticals=TRUE) 
+qqnorm(ECO.new); qqline(ECO.new) 
+qqplot(rnorm(ppoints(250)), ECO.new, xlab = "Q-Q plot for norm dsn") 
+qqline(ECO.new)
+qqplot(rt(ppoints(250), df = 5), ECO.new, xlab = "Q-Q plot for t dsn") 
+qqline(ECO.new)
