@@ -32,3 +32,5 @@ pred_2       setosa versicolor virginica
   setosa         40          0         0
   versicolor      0         38         1
   virginica       0          2        39
+
+EXERCISE 3:
