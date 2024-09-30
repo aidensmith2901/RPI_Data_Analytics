@@ -1,0 +1,34 @@
+EXERCISE 1:
+Selected Features:  whole_weight, shell_weight, diameter 
+         Actual
+Predicted young adult old
+    young   230    71  25
+    adult    50   229 114
+    old       1    62  53
+Selected Features:  length, viscera_wieght, diameter 
+         Actual
+Predicted young adult old
+    young   217    63  23
+    adult    64   243 137
+    old       0    56  32
+Selected Features:  shell_weight, diameter, shucked_wieght 
+         Actual
+Predicted young adult old
+    young   227    92  33
+    adult    52   237 108
+    old       2    33  51
+
+EXERCISE 2:
+Confusion Matrix for Subset 1:
+
+pred_1       setosa versicolor virginica
+  setosa         39          0         0
+  versicolor      1         31         9
+  virginica       0          9        31
+
+Confusion Matrix for Subset 2:
+            
+pred_2       setosa versicolor virginica
+  setosa         40          0         0
+  versicolor      0         38         1
+  virginica       0          2        39
