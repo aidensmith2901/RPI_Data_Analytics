@@ -1,0 +1,58 @@
+Section 2 - Linear Models
+Whole Dataset
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.344  -3.374  -0.437   3.280  13.413 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.462659   2.707696   1.648    0.102    
+ECO          1.213033   0.085455  14.195  < 2e-16 ***
+BDH         -0.379631   0.064737  -5.864 4.01e-08 ***
+MKP         -0.016450   0.019082  -0.862    0.390    
+MHP          0.021618   0.027973   0.773    0.441    
+MPE         -0.004785   0.017685  -0.271    0.787    
+---
+Multiple R-squared:  0.813,	Adjusted R-squared:  0.8053 
+F-statistic: 105.2 on 5 and 121 DF,  p-value: < 2.2e-16
+
+Sub-Saharan Africa
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.5824 -1.7962 -0.1474  2.0675  4.9441 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 30.17818    5.44408   5.543 9.49e-05 ***
+ECO          0.33922    0.22874   1.483    0.162    
+BDH         -0.10102    0.16156  -0.625    0.543    
+MKP         -0.03065    0.03504  -0.875    0.397    
+MHP          0.12569    0.06667   1.885    0.082 .  
+MPE         -0.02930    0.03749  -0.782    0.448    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Multiple R-squared:  0.6397,	Adjusted R-squared:  0.5011 
+F-statistic: 4.616 on 5 and 13 DF,  p-value: 0.01216
+
+The model for the whole dataset is a better fit than the one for Sub-Saharan Africa because of its higher Multiple R-squared (0.813 vs. 0.6397) and Adjusted R-squared (0.8053 vs. 0.5011). This suggests that it explains a larger proportion of variance in the dependent variable. Also, the F-statistic and p-value for the whole dataset model indicate a stronger overall significance compared to the Sub-Saharan Africa model.
+
+Section 3 - KNN
+knn_model1             Asia-Pacific Eastern Europe Former Soviet States
+  Asia-Pacific                    3              0                    0
+  Eastern Europe                  1              3                    0
+  Former Soviet States            2              0                    1
+Accuracy for Subset 1: 0.7
+
+knn_model2                  Global West Greater Middle East Latin America & Caribbean
+  Global West                         5                   0                         1
+  Greater Middle East                 0                   1                         1
+  Latin America & Caribbean           0                   3                         6
+Accuracy for Subset 2: 0.7058824
+
+Based on the accuracy of the two models, subset 2 performs better than the first subset. However, the accuracy is only marginally better so both models perform relatively the same
+
+WSS Subset 1 =  33248.72
+WSS Subset 2 =  59742.21
+
+Subset 1 performs better than Subset 2, as indicated by its lower within-cluster sum of squares (WSS) value (39,526.38 compared to 70,819.55). A lower WSS suggests that the data points in Subset 1 are more tightly clustered, indicating a better clustering performance.
