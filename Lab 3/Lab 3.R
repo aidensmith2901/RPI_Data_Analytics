@@ -59,14 +59,14 @@ qqline(globe.west$ECO, col = "red")
 epi.lm <- lm(EPI ~ ECO + BDH + MKP + MHP + MPE, data = epi.whole)
 summary(epi.lm)
 
-plot(epi.whole$ECO, epi.whole$EPI, main = "ECO vs EPI", xlab = "ECO", ylab = "EPI")
-abline(lm(EPI ~ ECO, data = epi.whole), col = "red")
+plot(epi.whole$EPI, epi.whole$ECO, main = "ECO vs EPI", xlab = "EPI", ylab = "ECO")
+abline(lm(ECO ~ EPI, data = epi.whole), col = "red")
 # 2.2.
 epi.lm <- lm(EPI ~ ECO + BDH + MKP + MHP + MPE, data = sub.africa)
 summary(epi.lm)
 
-plot(sub.africa$MHP, sub.africa$EPI, main = "Sub-Saharan Africa MHP vs EPI", xlab = "MHP", ylab = "EPI")
-abline(lm(EPI ~ MHP, data = sub.africa), col = "red")
+plot(sub.africa$EPI,sub.africa$MHP, main = "Sub-Saharan Africa MHP vs EPI", xlab = "EPI", ylab = "MHP")
+abline(lm(MHP ~ EPI, data = sub.africa), col = "red")
 
 # KNN
 #3.1.
@@ -113,7 +113,7 @@ for (k in ks) {
   wss <- c(wss,km1$tot.withinss)
 }
 plot(ks,wss,type = "b", main="Subset 1 Elbow")
-km1 <- kmeans(subset1[,-1], centers = 4)
+km1 <- kmeans(subset1[,-1], centers = 3)
 wss1 <- km1$tot.withinss
 
 wss <- c()
