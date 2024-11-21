@@ -1,0 +1,10 @@
+SVM and KNN Model Performance
+         Model Precision    Recall  F1_Score
+1 SVM (Linear) 0.9066277 0.9169001 0.9087337
+2    SVM (RBF) 0.9231969 0.9327731 0.9266010
+3          kNN 0.9066277 0.9169001 0.9087337
+
+Regression Performance
+              Model Mean_Squared_Error R_Squared
+1    SVM Regression          0.6540620 0.3402277
+2 Linear Regression          0.7030601 0.2908018
